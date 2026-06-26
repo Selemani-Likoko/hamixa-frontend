@@ -15,7 +15,7 @@ function UploadBook({ user }) {
     formData.append("user_id", user.id); // send user_id to backend
 
     try {
-      const res = await fetch("http://localhost:3000/upload", {
+      const res = await fetch(`${API_URL}/upload`, {
         method: "POST",
         body: formData,
       });
